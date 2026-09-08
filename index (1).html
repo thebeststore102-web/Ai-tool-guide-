@@ -1,0 +1,79 @@
+ <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Tool Guide — Find the Right AI Tool</title>
+<meta name="description" content="Discover and compare AI tools for work, study, content creation and productivity.">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#171923;line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e5e7ef}.nav{height:70px;display:flex;align-items:center;gap:28px}.logo{font-weight:800;font-size:19px}.logo b{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:11px;background:#635bff;color:#fff;font-size:12px;margin-right:8px}nav{margin-left:auto;display:flex;gap:24px}nav a{color:#687083;font-weight:650;font-size:14px}#menu{display:none}.hero{padding:85px 0;background:radial-gradient(circle at 80% 20%,#ecebff,transparent 35%)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.eyebrow{color:#635bff;font-weight:800;letter-spacing:.12em;font-size:11px}.hero h1{font-size:clamp(44px,6vw,72px);line-height:1.04;letter-spacing:-3px;margin:15px 0}.hero h1 span{color:#635bff}.hero p{color:#687083;font-size:18px;max-width:620px}.actions{display:flex;gap:12px;margin-top:28px}.btn{display:inline-block;padding:13px 18px;border:1px solid #e5e7ef;border-radius:12px;font-weight:750}.primary{background:#635bff;color:#fff;border-color:#635bff}.panel{background:#fff;border:1px solid #e5e7ef;border-radius:22px;padding:20px;box-shadow:0 20px 50px #14142814}.panel input{width:100%;padding:15px;border:0;background:#f7f8fc;border-radius:12px;outline:0}.result{padding:14px 5px;border-bottom:1px solid #eee}.result small{color:#635bff}.section{padding:80px 0}.alt{background:#f7f8fc}.section h2{font-size:34px;letter-spacing:-1px;margin:5px 0 30px}.grid{display:grid;gap:18px}.cats,.tools,.articles{grid-template-columns:repeat(3,1fr)}.cats article,.tool,.articles article{background:#fff;border:1px solid #e5e7ef;border-radius:18px;padding:22px}.cats article{font-size:24px}.cats h3,.tool h3,.articles h3{font-size:17px;margin:8px 0}.cats p,.tool p,.articles p{color:#687083;font-size:13px;margin:0}.tool-head{display:flex;gap:12px;align-items:center}.icon{width:44px;height:44px;display:grid;place-items:center;background:#f7f8fc;border-radius:12px}.rating{margin-top:18px;font-size:13px;font-weight:700}.articles span{font-size:11px;color:#635bff;font-weight:800;text-transform:uppercase}.cta{padding:70px 0;background:#171923;color:#fff;text-align:center}.cta h2{font-size:34px}.cta p{color:#aeb3c2}footer{background:#101117;color:#9297a7;padding:35px 0;font-size:13px}footer strong{color:#fff}
+@media(max-width:800px){#menu{display:block;margin-left:auto;background:none;border:0;font-size:23px}nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;padding:20px;flex-direction:column}nav.open{display:flex}.hero-grid,.cats,.tools,.articles{grid-template-columns:1fr}.hero{padding:60px 0}.hero h1{font-size:44px}.actions{flex-direction:column}.btn{text-align:center}}
+</style>
+</head>
+<body>
+<header><div class="nav wrap"><a class="logo" href="#"><b>AI</b> Tool Guide</a><button id="menu">☰</button><nav id="nav"><a href="#tools">AI Tools</a><a href="#categories">Categories</a><a href="#guides">Guides</a><a href="#about">About</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">✦ AI TOOLS, EXPLAINED SIMPLY</div><h1>Find the <span>Right AI Tool</span> for Every Task</h1><p>Discover, compare and choose useful AI tools for work, study, content creation and productivity.</p><div class="actions"><a class="btn primary" href="#tools">Explore Tools →</a><a class="btn" href="#guides">Read Guides</a></div></div><div class="panel"><input id="search" placeholder="Search AI tools..."><div id="results"></div></div></div></section>
+<section id="categories" class="section wrap"><div class="eyebrow">EXPLORE</div><h2>Popular Categories</h2><div class="grid cats"><article>✍️<h3>AI Writing</h3><p>Writing and content creation.</p></article><article>🎨<h3>AI Image</h3><p>Generate and edit images.</p></article><article>🎬<h3>AI Video</h3><p>Create videos faster.</p></article><article>⚡<h3>Productivity</h3><p>Automate everyday work.</p></article><article>💼<h3>Business</h3><p>AI for teams and companies.</p></article><article>🎓<h3>Education</h3><p>Tools for learning and research.</p></article></div></section>
+<section id="tools" class="section alt"><div class="wrap"><div class="eyebrow">EDITOR'S PICKS</div><h2>Featured AI Tools</h2><div id="toolsGrid" class="grid tools"></div></div></section>
+<section id="guides" class="section wrap"><div class="eyebrow">LATEST GUIDES</div><h2>Learn How to Use AI</h2><div class="grid articles"><article><span>AI Tools</span><h3>Best AI Tools for Students</h3><p>Useful tools for research, writing and study.</p></article><article><span>Productivity</span><h3>How AI Can Save You Time at Work</h3><p>Practical AI workflows for repetitive tasks.</p></article><article><span>Creative</span><h3>How to Create Images With AI</h3><p>Understand the basics of AI image generation.</p></article></div></section>
+<section id="about" class="cta"><div class="wrap"><h2>AI tools, without the confusion.</h2><p>We make AI easier to understand so you can choose the right tool for the job.</p></div></section>
+</main>
+<footer><div class="wrap"><strong>AI Tool Guide</strong><p>© 2026 AI Tool Guide. Starter version.</p></div></footer>
+<script>
+constconst tools = [
+  ["ChatGPT","💬","AI Assistant","A general-purpose AI assistant for writing, brainstorming, learning, coding and everyday tasks.","https://chatgpt.com/"],
+  
+  ["Google Gemini","✨","AI Assistant","Google's AI assistant for writing, research, brainstorming and everyday tasks.","https://gemini.google.com/"],
+  
+  ["Claude","🧠","AI Assistant","An AI assistant designed for writing, analysis, reasoning and working with long documents.","https://claude.ai/"],
+  
+  ["Microsoft Copilot","🪟","AI Assistant","An AI assistant for questions, writing, research and productivity.","https://copilot.microsoft.com/"],
+  
+  ["Perplexity","🔎","Research","An AI-powered search and research tool that provides answers with web sources.","https://www.perplexity.ai/"],
+  
+  ["NotebookLM","📚","Research","A research assistant that helps you learn and ask questions about your own sources.","https://notebooklm.google.com/"],
+  
+  ["Canva","🎨","Design","A visual design platform with AI features for graphics, presentations and creative content.","https://www.canva.com/"],
+  
+  ["Adobe Firefly","🔥","Design","Adobe's generative AI tools for creating and editing creative visual content.","https://firefly.adobe.com/"],
+  
+  ["Midjourney","🖼️","Design","An AI image-generation platform for creating artistic and imaginative visuals.","https://www.midjourney.com/"],
+  
+  ["Grammarly","✏️","Writing","AI-powered writing assistance for grammar, clarity, tone and communication.","https://www.grammarly.com/"],
+  
+  ["QuillBot","🔄","Writing","AI writing tools for paraphrasing, summarizing and improving text.","https://quillbot.com/"],
+  
+  ["Jasper","📝","Writing","AI-powered tools for marketing content and business writing.","https://www.jasper.ai/"],
+  
+  ["GitHub Copilot","💻","Coding","An AI coding assistant that helps developers write, understand and improve code.","https://github.com/features/copilot"],
+  
+  ["Cursor","⌨️","Coding","An AI-powered code editor designed to help developers understand and modify software.","https://www.cursor.com/"],
+  
+  ["Replit","🚀","Coding","An online development platform with AI features for building and experimenting with software.","https://replit.com/"],
+  
+  ["Runway","🎬","Video","AI-powered creative tools for generating and editing video and visual content.","https://runwayml.com/"],
+  
+  ["Descript","🎙️","Video","A video and audio editor that uses transcripts and AI-powered editing features.","https://www.descript.com/"],
+  
+  ["ElevenLabs","🔊","Audio","AI voice and audio technology for speech generation and creative projects.","https://elevenlabs.io/"],
+  
+  ["Notion AI","⚡","Productivity","AI features for writing, notes, summaries and workspace productivity.","https://www.notion.com/product/ai"],
+  
+  ["Zapier","🔗","Productivity","Automation tools that connect apps and help automate repetitive workflows.","https://zapier.com/ai"]
+];=[
+["ChatGPT","💬","AI Assistant","AI assistance for writing, brainstorming, learning and coding.","4.9"],
+["Gemini","✨","AI Assistant","AI assistance for research, writing and productivity.","4.7"],
+["Canva","🎨","Design","Create graphics, presentations and visual content.","4.8"],
+["Claude","🧠","AI Assistant","Useful for writing, analysis, research and long documents.","4.8"],
+["Perplexity","🔎","Research","AI-powered search and research for exploring questions.","4.7"],
+["Grammarly","✏️","Writing","Writing assistance for grammar, clarity and tone.","4.6"]];
+const grid=document.getElementById("toolsGrid"),results=document.getElementById("results"),search=document.getElementById("search");
+function card(t){return `<article class="tool"><div class="tool-head"><div class="icon">${t[1]}</div><div><div class="eyebrow">${t[2]}</div><h3>${t[0]}</h3></div></div><p>${t[3]}</p><div class="rating">★ ${t[4]}</div></article>`}
+grid.innerHTML=tools.map(card).join("");
+function show(q=""){let a=tools.filter(t=>t.join(" ").toLowerCase().includes(q.toLowerCase())).slice(0,5);results.innerHTML=a.length?a.map(t=>`<div class="result"><b>${t[1]} ${t[0]}</b><br><small>${t[2]}</small></div>`).join(""):"<div class='result'>No matching tools found.</div>"}
+show();search.addEventListener("input",e=>show(e.target.value));
+document.getElementById("menu").onclick=()=>document.getElementById("nav").classList.toggle("open");
+</script>
+</body>
+</html>
