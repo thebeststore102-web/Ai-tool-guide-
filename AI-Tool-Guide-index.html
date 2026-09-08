@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Tool Guide</title>
+<meta name="description" content="Discover useful AI tools for writing, images, coding, research and productivity.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
+header{background:#fff;border-bottom:1px solid #e5e7eb;padding:18px 6%}
+nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:24px;font-weight:800;color:#2563eb}nav a{text-decoration:none;color:#374151;margin-left:18px}
+.hero{padding:70px 6%;text-align:center;background:linear-gradient(135deg,#eef4ff,#fff)}
+.hero h1{font-size:44px;margin:0 0 15px}.hero p{font-size:18px;color:#5b6475;max-width:700px;margin:0 auto 25px}
+.search{max-width:650px;margin:auto}.search input{width:100%;padding:15px;border:1px solid #d5d9e2;border-radius:10px;font-size:16px}
+.container{max-width:1150px;margin:auto;padding:45px 6%}h2{font-size:30px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:25px}.filters button{padding:10px 15px;border:1px solid #d7dce5;background:#fff;border-radius:20px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:15px;padding:22px;box-shadow:0 5px 18px #00000008}
+.icon{font-size:32px}.card h3{margin:10px 0 8px}.card p{color:#626b7b;line-height:1.5}
+.card a{display:inline-block;margin-top:8px;background:#2563eb;color:#fff;text-decoration:none;padding:10px 15px;border-radius:8px}
+.guide{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px;margin:12px 0}
+footer{margin-top:30px;padding:30px 6%;background:#111827;color:#dbe2ee;text-align:center}
+@media(max-width:600px){.hero h1{font-size:34px}nav{flex-direction:column}}
+</style>
+</head>
+<body>
+<header><nav><div class="logo">AI Tool Guide</div><div><a href="#tools">Tools</a><a href="#guides">Guides</a><a href="#about">About</a></div></nav></header>
+<section class="hero"><h1>Find the Right AI Tool</h1><p>Explore useful AI tools for writing, images, coding, research, productivity and more.</p><div class="search"><input id="search" placeholder="Search AI tools..."></div></section>
+<main class="container" id="tools"><h2>Popular AI Tools</h2>
+<div class="filters"><button onclick="filterTools('All')">All</button><button onclick="filterTools('Writing')">Writing</button><button onclick="filterTools('Images')">Images</button><button onclick="filterTools('Coding')">Coding</button><button onclick="filterTools('Productivity')">Productivity</button></div>
+<div class="grid" id="grid"></div>
+<section id="guides"><h2>Beginner Guides</h2>
+<div class="guide"><b>How to choose an AI tool</b><p>Start with your goal, compare features, check pricing, and test available free options.</p></div>
+<div class="guide"><b>AI for writing</b><p>Use AI to brainstorm, draft, summarize and improve your writing.</p></div>
+<div class="guide"><b>AI for productivity</b><p>Use AI to organize notes, research topics and automate repetitive work.</p></div></section>
+<section id="about"><h2>About AI Tool Guide</h2><p>AI Tool Guide is a simple directory helping people discover useful artificial intelligence tools.</p></section>
+</main>
+<footer>© 2026 AI Tool Guide · About · Privacy · Terms</footer>
+<script>
+const tools=[
+["ChatGPT","Writing","💬","AI assistant for writing, brainstorming, learning and everyday tasks","https://chatgpt.com/"],
+["Google Gemini","Productivity","✨","Google AI assistant for writing, research and planning","https://gemini.google.com/"],
+["Claude","Writing","🧠","AI assistant for writing, analysis and long documents","https://claude.ai/"],
+["Microsoft Copilot","Productivity","🤖","AI assistant for questions, writing and productivity","https://copilot.microsoft.com/"],
+["Perplexity","Productivity","🔎","AI-powered search and research assistant","https://www.perplexity.ai/"],
+["NotebookLM","Productivity","📚","Research assistant that works with your own sources","https://notebooklm.google.com/"],
+["Canva","Images","🎨","Design platform with AI tools for images and presentations","https://www.canva.com/"],
+["Adobe Firefly","Images","🔥","Generative AI tools for creating and editing images","https://firefly.adobe.com/"],
+["Midjourney","Images","🖼️","AI image generation for creative visual projects","https://www.midjourney.com/"],
+["Grammarly","Writing","✍️","Writing assistant for grammar, clarity and tone","https://www.grammarly.com/"],
+["QuillBot","Writing","📝","Writing and paraphrasing tools for improving text","https://quillbot.com/"],
+["Jasper","Writing","🚀","AI tools for marketing and business content","https://www.jasper.ai/"],
+["GitHub Copilot","Coding","💻","AI coding assistant for developers","https://github.com/features/copilot"],
+["Cursor","Coding","⌨️","AI-powered code editor for software development","https://www.cursor.com/"],
+["Replit","Coding","🧑‍💻","Online development environment with AI coding assistance","https://replit.com/"],
+["Runway","Images","🎬","AI creative tools for generating and editing video","https://runwayml.com/"],
+["Descript","Productivity","🎙️","AI tools for editing video, audio and transcripts","https://www.descript.com/"],
+["ElevenLabs","Productivity","🔊","AI voice and audio generation platform","https://elevenlabs.io/"],
+["Notion AI","Productivity","📓","AI features for notes, documents and productivity","https://www.notion.com/product/ai"],
+["Zapier","Productivity","⚡","Automation platform with AI features for workflows","https://zapier.com/ai"]];
+let current="All";
+function render(){let q=document.getElementById("search").value.toLowerCase();document.getElementById("grid").innerHTML=tools.filter(t=>(current==="All"||t[1]===current)&&t[0].toLowerCase().includes(q)).map(t=>'<article class="card"><div class="icon">'+t[2]+'</div><h3>'+t[0]+'</h3><small>'+t[1]+'</small><p>'+t[3]+'</p><a href="'+t[4]+'" target="_blank" rel="noopener">Visit Tool</a></article>').join("")}
+function filterTools(c){current=c;render()}document.getElementById("search").addEventListener("input",render);render();
+</script>
+</body></html>
